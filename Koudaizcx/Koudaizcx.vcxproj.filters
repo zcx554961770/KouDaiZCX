@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="内存读写">
+      <UniqueIdentifier>{37e812c7-eeab-4f5a-9657-5004ca0a7530}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hook函数">
+      <UniqueIdentifier>{87cd6abb-edc1-478f-a089-00216d1620e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hook函数\字符数组转化">
+      <UniqueIdentifier>{940a648d-4dfe-40a5-a204-ca4484e6dee8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Koudaizcx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CKDXYPAGE.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="内存读写.cpp">
+      <Filter>内存读写</Filter>
+    </ClCompile>
+    <ClCompile Include="HOOK_BUF.cpp">
+      <Filter>Hook函数</Filter>
+    </ClCompile>
+    <ClCompile Include="CPAGE2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="整数字符串相互转化.cpp">
+      <Filter>Hook函数\字符数组转化</Filter>
+    </ClCompile>
+    <ClCompile Include="CPAGE3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Koudaizcx.def">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="res\Koudaizcx.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Koudaizcx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CKDXYPAGE.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="内存读写.h">
+      <Filter>内存读写</Filter>
+    </ClInclude>
+    <ClInclude Include="HOOK_BUF.h">
+      <Filter>Hook函数</Filter>
+    </ClInclude>
+    <ClInclude Include="CPAGE2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="整数字符串相互转化.h">
+      <Filter>Hook函数\字符数组转化</Filter>
+    </ClInclude>
+    <ClInclude Include="CPAGE3.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Koudaizcx.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

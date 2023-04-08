@@ -56,10 +56,15 @@ CKoudaizcxApp theApp;
 
 // CKoudaizcxApp 初始化
 #include "CKDXYPAGE.h"
+#include "CMAINPAGE.h"
 DWORD WINAPI 显示窗口(LPVOID arg) {
 	AFX_MANAGE_STATE(AfxGetStaticModuleState());
-	CKDXYPAGE ckdxypage;//创建窗口对象；
-	ckdxypage.DoModal();//生成窗口对象；
+	//CKDXYPAGE ckdxypage;//创建窗口对象；
+	{
+		CMAINPAGE vabc;
+		vabc.DoModal();//生成窗口对象；
+	}
+	FreeLibraryAndExitThread(theApp.m_hInstance, 19960305);
 	return 1;
 }
 BOOL CKoudaizcxApp::InitInstance()

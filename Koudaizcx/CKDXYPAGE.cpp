@@ -35,6 +35,8 @@ BEGIN_MESSAGE_MAP(CKDXYPAGE, CDialogEx)
 	ON_BN_CLICKED(IDC_BUTTON5, &CKDXYPAGE::OnBnClickedButton5)
 	ON_BN_CLICKED(IDC_BUTTON6, &CKDXYPAGE::OnBnClickedButton6)
 	ON_BN_CLICKED(IDC_BUTTON7, &CKDXYPAGE::OnBnClickedButton7)
+	ON_BN_CLICKED(IDC_BUTTON8, &CKDXYPAGE::OnBnClickedButton8)
+	ON_BN_CLICKED(IDC_BUTTON9, &CKDXYPAGE::OnBnClickedButton9)
 END_MESSAGE_MAP()
 
 
@@ -146,4 +148,48 @@ void CKDXYPAGE::OnBnClickedButton7()
 	// TODO: 在此添加控件通知处理程序代码
 	m_page3.DoModal();//模态
 	//m_page1.ShowWindow(SW_SHOW); //非模态
+}
+
+#include"MonsterList.h"
+void CKDXYPAGE::OnBnClickedButton8()
+{
+	// TODO: 在此添加控件通知处理程序代码
+		//MonsterList a;
+	//a.遍历数组();
+	MonsterList::遍历数组();
+}
+
+
+void CKDXYPAGE::OnBnClickedButton9()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	//目标地址 = 当前指令地址 + 指令长度 + 偏移量
+	//偏移量 = 目标地址 - 当前指令地址 - 指令长度;
+	//计算当前要写入的偏移量
+	MessageBeep(1);
+	DWORD  目标地址 = (DWORD)naked_Hook取包内容;// 0x79835844;  naked_Hook取包内容
+	DWORD  偏移量 = 目标地址 - 0x0067D4E7 - 5;//79EB2D30
+	//E9+偏移量
+	if (R1(0x0067D4E7) == 0xE9) //
+	{//没有被HOOK过
+	 //写入E9 写入偏移量 写入长度5字节
+		BYTE 五字节jmp机器码[5] = { 0x64,0xA1,0,0,0 };
+
+		BYTE* 地址 = (BYTE*)0x0067D4E7; // 当前指令地址
+
+		DWORD 内存页面属性 = PAGE_EXECUTE_READWRITE; //内存页面属性 标记为 可执行EXECUTE 可读READ 可写WRITE
+		DWORD 原来的内存页面属性 = 0;
+		VirtualProtect(地址, 5, 内存页面属性, &原来的内存页面属性);  //改写页面属性
+	  //  memcpy_s(地址, 5, 五字节jmp机器码, 5); //可以写了
+		{
+			地址[0] = 五字节jmp机器码[0];
+			地址[1] = 五字节jmp机器码[1];
+			地址[2] = 五字节jmp机器码[2];
+			地址[3] = 五字节jmp机器码[3];
+			地址[4] = 五字节jmp机器码[4];
+
+		}
+		VirtualProtect(地址, 5, 原来的内存页面属性, &原来的内存页面属性); //还原页面属性
+
+	}
 }

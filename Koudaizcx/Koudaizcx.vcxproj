@@ -185,10 +185,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CKDXYPAGE.cpp" />
+    <ClCompile Include="CMAINPAGE.cpp" />
     <ClCompile Include="CPAGE2.cpp" />
     <ClCompile Include="CPAGE3.cpp" />
     <ClCompile Include="HOOK_BUF.cpp" />
     <ClCompile Include="Koudaizcx.cpp" />
+    <ClCompile Include="MonsterList.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -204,11 +206,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CKDXYPAGE.h" />
+    <ClInclude Include="CMAINPAGE.h" />
     <ClInclude Include="CPAGE2.h" />
     <ClInclude Include="CPAGE3.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="HOOK_BUF.h" />
     <ClInclude Include="Koudaizcx.h" />
+    <ClInclude Include="MonsterList.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />

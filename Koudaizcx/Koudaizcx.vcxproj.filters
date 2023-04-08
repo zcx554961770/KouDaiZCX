@@ -22,6 +22,9 @@
     <Filter Include="Hook函数\字符数组转化">
       <UniqueIdentifier>{940a648d-4dfe-40a5-a204-ca4484e6dee8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="游戏数据">
+      <UniqueIdentifier>{23e69be5-f938-4138-b95e-34bceec0f288}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Koudaizcx.cpp">
@@ -47,6 +50,12 @@
     </ClCompile>
     <ClCompile Include="CPAGE3.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CMAINPAGE.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterList.cpp">
+      <Filter>游戏数据</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -90,6 +99,12 @@
     </ClInclude>
     <ClInclude Include="CPAGE3.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CMAINPAGE.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterList.h">
+      <Filter>游戏数据</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
